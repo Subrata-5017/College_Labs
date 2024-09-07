@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>REGISTRATION FORM</title>
+    <style>
+        body {
+            margin: auto 40vh;
+        }
+
+        .outer-container {
+            border: 5px dashed;
+            border-radius: 8px;
+            width: 100%;
+        }
+
+        .inner-container {
+            display: block;
+            background: linear-gradient(to bottom right, rgb(145, 197, 211), rgb(223, 158, 226));
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: auto
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            margin: auto auto;
+            justify-content: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-left: 1vh;
+
+        }
+
+        tr,
+        td {
+            padding: 2.5vh;
+            padding-left: 1px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        textarea {
+            width: 250px;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+           
+        }
+
+        textarea[name="Address"] {
+            width: 80%;
+            height: 150px;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            
+        }
+
+        .country {
+            width: 250px;
+            padding: 0.5vh 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+        }
+
+        .hobbie {
+            /* width: 200px; */
+            height: 30px;
+            padding: 8px;
+            margin: auto;
+        }
+
+        .achivement-row {
+            padding: 0px;
+            height: 1px;
+        }
+
+        .achivement-row td {
+            padding: 0.5vh 0;
+        }
+
+        .qualification-row td {
+            padding: 0.5vh 0;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 1px;
+
+        }
+
+        .submit,
+        .reset {
+            cursor: pointer;
+            padding: 10px 30px;
+            margin: .5vh;
+            margin-bottom: 0;
+            background-color: white;
+            text-align: center;
+            /* Ensures text is centered */
+            flex: 1;
+            /* Makes both labels take equal space */
+            display: flex;
+            /* Enables flexbox layout */
+            align-items: center;
+            /* Centers content vertically */
+            justify-content: center;
+            /* Centers content horizontally */
+            border: 1px;
+            /* Optional: Add a border for better visibility */
+            max-width: 10vh;
+
+        }
+
+        .submit {
+            text-align: left;
+            margin-left: auto;
+            margin-bottom: 1vh;
+            text-align: center;
+            width: 1vh;
+        }
+
+        .reset {
+            text-align: right;
+            margin-right: auto;
+            width: 5vh;
+            margin-bottom: 1vh;
+            padding-left: 21px;
+            text-align: center;
+        }
+
+        .submit:hover {
+            background-color: #efe9e9;
+        }
+
+        .reset:hover {
+            background-color: #efe9e9;
+        }
+        .button-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .button {
+            padding: 10px 30px;
+            margin: 20px;
+            width: 10vh;
+            font-size: 16px;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 25px;
+            /* text-decoration: underline; */
+            color: black;
+            cursor: pointer;
+            background-color: rgb(250, 243, 233);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer-container">
+        <div class="inner-container">
+            <form class="container">
+                <table>
+                    <tr>
+                        <td colspan="3">
+                            <h2>STUDENT &nbsp;REGISTRATION &nbsp;FORM</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>First Name :</td>
+                        <td><input type="text" maxlength="50">&nbsp;(Max 50 characters allowed)</td>
+                    </tr>
+                    <tr>
+                        <td>Midle Name :</td>
+                        <td><input type="text" maxlength="20">&nbsp;(Max 20 Characters Allowed)</td>
+                    </tr>
+                    <tr>
+                        <td>Last Name :</td>
+                        <td><input type="text" maxlength="20">&nbsp;(Max 50 Characters Allowed)</td>
+                    </tr>
+                    <tr>
+                        <td>Email ID :</td>
+                        <td><input type="email" placeholder="yghanendra@gmail.com"></td>
+                    </tr>
+                    <tr>
+                        <td>Mobile Number:</td>
+                        <td><input type="tel" id="phone" name="phone" maxlength="10" placeholder="123-456-7890">
+                            &nbsp;(10 Digits Allowed)</td>
+                    </tr>
+                    <tr>
+                        <td>Gender :</td>
+                        <!-- <td>Male&nbsp; &nbsp;<input type="range" min="0" max="100" value="0"> &nbsp;Female</td> -->
+                        <td>
+                            <pre><input type="checkbox">&NonBreakingSpace;Male  <input type="checkbox">&nbsp;Female</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Date Of Birth (DOB):&nbsp;</td>
+                        <td>
+                            <select>
+                                <option>DAY</option>
+                                <script>
+                                    for (let day = 1; day <= 31; day++) {
+                                        document.write(`<option value="${day}">${day}</option>`);
+                                    }
+                                </script>
+                            </select>
+                            <select>
+                                <option value="">MONTH</option>
+                                <option value="">JAN</option>
+                                <option value="">FEB</option>
+                                <option value="">MARCH</option>
+                                <option value="">APRIL</option>
+                                <option value="">MAY</option>
+                                <option value="">JUNE</option>
+                                <option value="">JULY</option>
+                                <option value="">AUG</option>
+                                <option value="">SEPT</option>
+                                <option value="">OCT</option>
+                                <option value="">NOV</option>
+                                <option value="">DEC</option>
+
+                            </select>
+
+                            <select id="year-select" name="year">
+                                <option>YEAR</option>
+                                <script>
+                                    for (let year = 1995; year <= 2030; year++) {
+                                        document.write(`<option value="${year}">${year}</option>`);
+                                    }
+                                </script>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Address :</td><br><br>
+                        <td><textarea cols="40" rows="10" name="Address"></textarea><br>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>City :</td>
+                        <td><input type="text" placeholder="Bangalore">&nbsp;(Max 50 Characters Allowed)</td>
+                    </tr>
+                    <tr>
+                        <td>Pin Code :</td>
+                        <td><input type="text" name="pincode" placeholder="560068">&nbsp;(Max 6 Numbers Allowed)</td>
+                    </tr>
+                    <tr>
+                        <TD>State :</TD>
+                        <td><input type="text" id="state" name="state" placeholder="Karnataka">&nbsp;(Max 50 Characters
+                            Allowed)</td>
+                    </tr>
+                    <tr>
+                        <td>Country :</td>
+                        <td><select id="Country" name="Country" class="country">
+                                <option value="india">INDIA</option>
+                                <option value="nepal"> NEPAL</option>
+                                <option value="bangladsh">BANGLADESH</option>
+                                <option value="australia"> AUSTRALIA</option>
+                                <option value="nigeria">NIGERIA</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" style="padding: right 100px;">Hobbies :&nbsp;</td>
+                        <td class="hobbie"><input type="checkbox" name="drawing" value="drawing">&nbsp;Drawing &nbsp;
+                            <input type="checkbox" name="singing" value="singing">&nbsp;Singing &nbsp;
+                            <input type="checkbox" name="dancing" value="dancing">&nbsp;Dancing &nbsp;
+                            <input type="checkbox" name="sketching" value="sketching">&nbsp;Sketching
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td class="hobbie"><input type="checkbox" name="others" value="others">Others :
+                            <input type="'text" name="others" style="width: 240px; padding: 6px;"
+                                placeholder="Ex-Teaching">&nbsp;(Max 50 Characters <br>&nbsp;Are Allowed)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="5">Qualification :</td>
+                    <tr>
+                    <tr class="qualification-row">
+                        <td></td>
+                    </tr>
+                    <tr class="qualification-row">
+                        <td><input type="checkbox" name="10th" value="10th">HIGH SCHOOL (10th)</td>
+                    </tr>
+                    <tr class="qualification-row">
+                        <td><input type="checkbox" name="12th" value="12th">HIGHER SCHOOL (12th)</td>
+                    </tr>
+                    <tr class="qualification-row">
+                        <td></td>
+                        <td><input type="checkbox" name="graduation" value="graduation">GRADUATION (Bachelors)</td>
+                    </tr>
+                    <tr class="qualification-row">
+                        <td></td>
+                        <td> <input type="checkbox" name="post-graduation" value="post-graduation">POST GRADUATION
+                            (Masters)
+                        </td>
+                    </tr>
+                    <tr class="qualification-row">
+                        <td></td>
+                        <td><input type="checkbox" name="phd" value="phd">PHD</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+
+
+                    <tr>
+                        <td rowspan="20">Courses <br>Applied For :</td>
+
+                    </tr>
+                    <tr class="achivement-row">
+                        <td><input type="checkbox">BCA (Bachelor Of Computer Application)</td>
+                    </tr>
+                    <tr class="achivement-row">
+                        <td><input type="checkbox">B.Com(BAchelor Of Commerce)</td>
+                    </tr>
+                    <tr class="achivement-row">
+                        <td><input type="checkbox">B.Sc(Bachelor Of Science)</td>
+                    </tr>
+                    <tr class="achivement-row">
+                        <td><input type="checkbox">B.A(Bachelor Of Arts)</td>
+                    </tr>
+                    <tr class="achivement-row">
+                        <td><input type="checkbox">MCA(Master Of Computer Application) </td>
+                    </tr>
+                    <tr class="achivement-row">
+                        <td><input type="checkbox">M.Com(Master Of Commerce)</td>
+                    </tr>
+                    <tr class="achivement-row">
+                        <td><input type="checkbox">M.Sc(Master Of Science)</td>
+                    </tr>
+                    <tr class="achivement-row">
+                        <td><input type="checkbox">M.A(Master Of Arts)</td>
+                    </tr>
+                </table>
+                <br><br>
+                <div class="button-container">
+                    <label class="submit">SUBMIT </label>
+                    <label class="reset">RESET</label>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <div class="button-container">
+        <a href="workspace.html" class=" button">Back to home</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+         body {
+            display: block;
+            justify-content: center;
+            padding-left: 70px;
+        }
+
+        img {
+            border: 1px solid;
+            border-radius: 15px;
+            justify-content: center;
+            margin: 50px;
+        }
+        p {
+            margin-right: 50vh;
+            line-height: 1.5;
+            word-spacing: 2px;
+            font-size: larger;
+        }
+        ul {
+            margin-right: 50vh;
+            line-height: 1.5;
+            word-spacing: 2px;
+            font-size: large;
+        }
+        pre {
+            border: 1px solid;
+            padding: 10px;
+            border-radius: 10px;
+            justify-content: center;
+            padding-right: 1px;
+            margin: 10px 200px;
+            margin-right: 60vh;
+            padding-top: 25px;
+            background-color: beige;
+        }
+        .button-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .button {
+            padding: 10px 30px;
+            margin: 20px;
+            width: 10vh;
+            font-size: 16px;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 25px;
+            text-decoration: none;
+            color: blue;
+            cursor: pointer;
+            background-color: rgb(250, 243, 233);
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>What is JavaScript?</h1>
+    <p>JavaScript is a scripting or programming language that allows you to implement complex features on web pages —
+        every time a web page does more than just sit there and display static information for you to look at —
+        displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. —
+        you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web
+        technologies, two of which (HTML and CSS)
+    </p>
+    <ul>
+        <li><b>HTML :</b>is the markup language that we use to structure and give meaning to our web content, for
+            example
+            defining paragraphs, headings, and data tables, or embedding images and videos in the page.</li><br><br>
+        <li><b>CSS :</b>is a language of style rules that we use to apply styling to our HTML content, for example
+            setting background colors and fonts, and laying out our content in multiple columns.</li><br><br>
+        <li><b>JavaScript :</b>is a scripting language that enables you to create dynamically updating content, control
+            multimedia, animate images, and pretty much everything else. (Okay, not everything, but it is amazing what
+            you can achieve with a few lines of JavaScript code.)</li>
+    </ul>
+    <img src="java.jpeg" alt="photo">
+    <h2>Whar JavaScript Can Do</h2>
+    <ul>
+        <li>Store useful values inside variables. In the above example for instance, we ask for a new name to be entered
+            then store that name in a variable called name.
+        </li><br>
+        <li>Operations on pieces of text (known as "strings" in programming). In the above example we take the string
+            "Player 1: " and join it to the name variable to create the complete text label, e.g. "Player 1: Chris".
+        </li><br>
+        <li>Running code in response to certain events occurring on a web page. We used a click event in our example
+            above to detect when the label is clicked and then run the code that updates the text label.
+        </li><br>
+        <li>And much more !</li>
+
+    </ul>
+    <h2>JavaScript Running Order</h2>
+    <p>When the browser encounters a block of JavaScript, it generally runs it in order, from top to bottom. This means
+        that you need to be careful what order you put things in. For example, let's return to the block of JavaScript
+        we saw in our first example:
+    </p>
+    <pre>
+        &lt;script&gt;
+            
+            const button = document.querySelector("button");
+            
+            button.textContent = "Player 1: John"; // Directly setting the text to "John"
+        
+        &lt;/script&gt;
+    </pre>
+    <h3>Output</h3>
+    <pre>
+        Player 1: John
+
+    </pre>
+    <div class="button-container">
+        <a href="website2.html" class=" button">Back to home</a>
+    </div>
+</body>
+
+</html>

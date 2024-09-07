@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Subrata Das</title>
+    <style>
+        .container{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: 2px dotted black;
+            border-radius: 10px;
+            background-color: rgb(244, 232, 217);
+            /* background-image: linear-gradient(to right, #7ca1b6 10%, #bad5ef 60%, #abdedf 90%); */
+            /* background-image: linear-gradient(to right, #434371, #905787); */
+            /* background-image: radial-gradient(to right,#020a0f 10%, #bad5ef 60%, #abdedf 90%); */
+            background-image: linear-gradient(to right, #f3f2f2, #bab8b8);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Moving Text */
+        .marquee {
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: initial;
+            color: #9a4141;
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .marquee span {
+            display: inline-block;
+            position: absolute;
+            animation: marquee 10s ease-in-out infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        .college-logo {
+            margin: 20px auto;
+            width: 200px;
+            height: auto;
+        }
+
+        .portfolio-content {
+            margin-top: 40px;
+        }
+        .about{
+            /* border: 2px solid; */
+            margin: auto 20px;
+            text-align: justify;
+            padding: 20px ;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+        pre{
+            background-color: #efecdd;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            overflow-x: auto;
+            font-family: monospace;
+            line-height: 1.5em;
+            text-align: justify;
+            margin: 10px 200px;
+        }
+        .physical-style{
+            text-align: left;
+            padding-left: 10px;
+            margin: 30px;
+        }
+        .skill ul{
+            text-align: left;
+            padding-left: 100px;
+        }
+        .style h4{
+            text-align: left;
+            padding-left: 10px;
+            margin: 30px;
+        }
+        .achivement ul{
+            margin-top: 0px;
+            text-align: left;
+            padding-left: 100px;
+        }
+        .achivement h4{
+            text-align: left;
+            padding-left: 30px;
+            margin: 10px;
+            padding-top: 0px;
+        }
+        footer{
+            border: 1px rgb(0, 0, 0);
+            border-radius: 200px;
+            width: 50%;
+            height: auto;
+            padding: 1px;
+            margin: 10px;
+            position: relative;
+            background-color: #a6c2e0;
+            margin: 10px auto;
+            margin-top: 90px;
+        }
+        .style{
+            border: 5px double;
+            border-radius: 10px;
+            margin: auto 50px;
+            /* background-color: rgb(240, 216, 192); */
+            background-color: #f7efe2;
+        }
+        h1{
+            font-family: Georgia, 'Times New Roman', Times, serif ;
+        }
+        h2 h3 h4 h5{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .button-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .button {
+            padding: 5px 30px;
+            margin: 20px;
+            width: auto;
+            font-size: 16px;
+            text-align: center;
+            /* border: 2px solid rgb(250, 243, 233); ; */
+            border-radius: 25px;
+            text-decoration: underline;
+            color: blue;
+            cursor: pointer;
+            /* background-color: rgb(250, 243, 233); */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <marquee class="marquee">Welcome to my Portfolio</marquee>
+            <img src="nitm.png" alt="College Logo" class="college-logo">
+        </header>
+
+        <!-- Portfolio Content -->
+        <div class="introduction">
+            <h1>Mr. Subrata Das</h1>
+            <h2>Programme : Bachelor Of Technology</h2>
+            <h3>Currently in 2nd Year</h3>
+            <h4>Skills : C , C++ , HTML , CSS</h4>
+            <h5>Roll Number : B23CS015</h5>
+            <h6>Email : <a href="mailto:b23cs015@nitm.ac.in">b23cs015@nitm.ac.in</a></h6>
+        </div>
+        <div class="about">
+            <!-- paragraph with horizontal line and line break -->
+            <p>Hello!<br> I'm Subrata Das,<br> a B.Tech student in <i>' Computer Science & Engineering '</i>at the <b><u>National Institute of Technology, Meghalaya</u></b> . I have a strong passion for coding, a deep interest in learning new technologies, and a commitment to contributing to open-source projects.</p>
+            <p>My current focus is on Machine Learning and Web Development. I’m fascinated by the transformative potential of machine learning and have applied various techniques to projects ranging from predictive analytics to deep learning. In web development, I enjoy both front-end and back-end work, creating dynamic and user-friendly applications.</p>
+            <p>Outside of my coursework, I love exploring new programming languages, reading about the latest trends in technology, and staying updated on emerging technologies.I’m excited to continue growing as a developer, leveraging my skills in machine learning and web development to create impactful solutions and contribute to innovative projects.</p>
+        </div>
+            <!-- preformatted text -->
+            <h4>Printing: " Hello World " in C</h4>
+            <pre>
+             #include&lt;stdio.h&gt;
+             int main()
+                 { 
+                    printf("Hello World");
+                 }
+            </pre>
+        <div class="physical-style">
+            <!-- physical-style -->
+            <h4><i>Some Physical-style :</i></h4>
+            <p>I used to believe in <strike>physical media</strike>, but I have since <del>deleted</del> all my DVDs in favor of streaming services.</p>
+            <p>I was going to send a <strike>physical letter</strike>, but I decided to <del>delete</del> that idea and send an email instead.</p>
+            <br>
+            <!-- logical style(bold,subscript,superscript) -->
+            <!-- listing tags -->
+            <h4>Logical Style :</h4>
+            <ol>
+                <li><p><strong>Machine learning</strong> is a rapidly growing field that is reshaping industries worldwide.</p></li>
+                <li><p>A boy believed that this idea would <em>revolutionize</em> the entire process.</p></li>
+            <li><p>The concept of <dfn>artificial intelligence</dfn> refers to machines that can perform tasks typically requiring human intelligence.</p></li>
+                <li><p>If you want to print a message to the console in Python, use the <code>print()</code> function.</p></li>
+                <li><p>The entire human body typically requires around 200-250 grams of C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>(glucose) per day.</p></li>
+                <li><p>The formula for calculating the area of a square is <code>A = s<sup>2</sup></code>, where <code>s</code> represents the length of one side.</p>
+                </li>
+            </ol>
+        </div>
+       <div class="style">
+            <div class="skill">
+                <h4>Skills : </h4>
+                <ul>
+                    <li><u>Programming Languages</u> :</li><br>
+                        <ol>
+                        <li>Python</li>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>Java</li>
+                        </ol>
+                        <br><li><u>Web Development :</u></li><br>
+                            <ol>
+                                <LI>front-end</LI>
+                                <LI>back-end</LI>
+                            </ol>
+                </ul>
+            </div>
+            <div class="achivement">
+                <h4>Achivements :</h4><br>
+                <ul>
+                    <li>Completed Coursera's Web Development course.</li>
+                    <li>C.B.S.E. board all india rank holder in Mathematics.</li>
+                    <li>NCC certified cadet.</li>
+                </ul>
+
+
+            </div>
+        </div>
+       
+        <footer>
+            <p>&#169; 2024 My Professional Portfolio</p>
+        </footer>
+
+
+    </div>
+    <div class="button-container">
+        <a href="workspace.html" class=" button">Back to home</a>
+    </div>
+
+
+</body>
+
+</html>

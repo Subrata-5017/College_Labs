@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Subrata's Workspace</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-image: repeating-linear-gradient(to bottom left, rgb(3, 7, 62), rgb(107, 107, 150));
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        h1 {
+            color: white;
+            font-size: 50px;
+            margin-bottom: 5vh;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .button {
+            padding: 10px 30px;
+            margin: 20px;
+            width: 30vh;
+            font-size: 16px;
+            text-align: center;
+            border: 2px solid white;
+            border-radius: 250px;
+            text-decoration: none;
+            background-color: transparent;
+            color: white;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: white;
+            color: black;
+        }
+
+       
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            width: 80%;
+        }
+
+        .box {
+            width: 20%;
+            padding: 20px;
+            text-align: center;
+            border: 2px solid white;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        .box img {
+            width: 100%;
+            height: auto;
+            transition: opacity 0.3s ease;
+        }
+
+        .box:hover img {
+            opacity: 0.3;
+        }
+
+        .description {
+            color: white;
+            margin-top: 10px;
+        }
+
+        .box .hover-text {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 18px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .box:hover .hover-text {
+            opacity: 1;
+        }
+
+        a.hover-link {
+            color: white;
+            text-decoration: none;
+        }
+
+        a.hover-link:hover {
+            text-decoration: underline;
+        }
+
+        p {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            line-height: 1.8;
+            /* word-spacing: 5px; */
+            text-align: justify;
+
+        }
+
+        p:hover {
+            background-color: transparent;
+            color: rgb(220, 220, 220);
+        }
+
+        .image {
+            border: 2px solid white;
+            border-radius: 8px;
+
+        }
+
+        .box a {
+            position: relative;
+            color: rgb(247, 207, 76);
+
+        }
+        .home{
+            margin-top: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Subrata's Workspace</h1>
+
+    <div class="button-container">
+        <a href="portfolio.html" class="button">Portfolio</a>
+        <a href="schedule.html" class="button">CSE Schedule</a>
+        <a href="registration.html" class="button">Registration Form</a>
+    </div>
+
+    <div class="container">
+
+        <div class="box">
+            <img src="c.jpg" alt="Image 1" class="image">
+            <div class="hover-text">
+                <a href="c.html" class="hover-link">About more -</a>
+            </div>
+            <div class="description">
+                <p>C, created by Dennis Ritchie in the 1970s, is a powerful, efficient language used in system
+                    programming and embedded systems. Its simplicity and portability influence many modern languages.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <img src="python.jpg" alt="Image 2" class="image">
+            <div class="hover-text">
+                <a href="page2.html" class="hover-link">About more -</a>
+            </div>
+            <div class="description">
+                <p>Python, a dynamic, high-level, object-oriented language, is surpassing C, C++, and Java in
+                    popularity. With over 25 years of growth, it showcases its success and future potential.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="ruby.jpg" alt="Image 3" class="image">
+            <div class="hover-text">
+                <a href="page3.html" class="hover-link">About more -</a>
+            </div>
+            <div class="description">
+                <p>Ruby, developed by Yukihiro Matsumoto in 1993, is a dynamic, object-oriented language valued for its
+                    simplicity. Named after the red gemstone, it symbolizes strength and vitality, bridging technology
+                    and holistic healing.</p>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <img src="JavaScript-logo.png" alt="Image 4" class="image">
+            <div class="hover-text">
+                <a href="page4.html" class="hover-link">About more -</a>
+            </div>
+            <div class="description">
+                <p>JavaScript, created by Brendan Eich in 1995, is a high-level language essential for web development.
+                    It enables interactive content, animations, and client-side scripting, evolving with modern
+                    frameworks.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="home">
+        <a href="workspace.html" class="button" id="back">Back to home</a>
+    </div>
+
+</body>
+
+</html>
