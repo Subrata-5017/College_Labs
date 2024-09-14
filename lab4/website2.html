@@ -55,7 +55,7 @@
             color: black;
         }
 
-       
+
         .container {
             display: flex;
             justify-content: space-around;
@@ -142,9 +142,53 @@
             color: rgb(247, 207, 76);
 
         }
-        .home{
+
+        .home {
             margin-top: 100px;
             text-align: center;
+        }
+
+        /* Added for responsive design */
+        @media only screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                width: 90%;
+            }
+
+            .box {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .button {
+                width: 100%;
+                padding: 15px;
+            }
+
+            .button-container {
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .button {
+                padding: 12px;
+                font-size: 14px;
+            }
+
+            .box {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            .container {
+                width: 100%;
+            }
         }
     </style>
 </head>

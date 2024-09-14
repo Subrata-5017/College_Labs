@@ -54,7 +54,7 @@
             padding: 8px;
             box-sizing: border-box;
             border: 1px solid #ccc;
-           
+
         }
 
         textarea[name="Address"] {
@@ -63,7 +63,7 @@
             padding: 8px;
             box-sizing: border-box;
             border: 1px solid #ccc;
-            
+
         }
 
         .country {
@@ -148,11 +148,13 @@
         .reset:hover {
             background-color: #efe9e9;
         }
-        .button-container{
+
+        .button-container {
             display: flex;
             align-items: center;
             justify-content: center;
         }
+
         .button {
             padding: 10px 30px;
             margin: 20px;
@@ -166,6 +168,24 @@
             cursor: pointer;
             background-color: rgb(250, 243, 233);
             text-decoration: none;
+        }
+
+        @media only screen and (max-width: 600px) {
+            body {
+                margin: auto 10px;
+            }
+
+            .container {
+                padding: 0 10px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="number"],
+            textarea {
+                width: 100%;
+            }
         }
     </style>
 </head>

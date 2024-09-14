@@ -2,6 +2,9 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             display: block;
@@ -65,6 +68,54 @@
 
             /* justify-content: center; */
         }
+        @media only screen and (max-width: 768px) {
+    body {
+        padding-left: 20px; /* Adjusted padding for smaller screens */
+    }
+
+    img {
+        margin: 20px;
+        width: 100%; /* Ensures image fits within the screen width */
+        max-width: 100%; /* Prevents overflow */
+    }
+
+    pre {
+        margin: 10px;
+        margin-right: 0; /* Remove excessive margin on smaller screens */
+        padding-right: 10px; /* Adjusted padding */
+        padding-top: 15px; /* Adjusted padding */
+        font-size: 14px; /* Reduced font size for better fit */
+    }
+
+    p, ul {
+        margin-right: 0; /* Remove excessive margin on smaller screens */
+        font-size: 16px; /* Adjusted font size for readability */
+    }
+
+    h1 {
+        font-size: 24px; /* Reduced font size for smaller screens */
+        margin-bottom: 20px; /* Adjusted margin */
+    }
+
+    h3 {
+        font-size: 20px; /* Adjusted font size */
+    }
+
+    h5 {
+        font-size: 18px; /* Adjusted font size */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+    }
+
+    .button {
+        padding: 10px 20px; /* Adjusted padding for smaller screens */
+        margin: 10px 0; /* Adjusted margin for spacing */
+        font-size: 14px; /* Reduced font size */
+    }
+}
+
     </style>
 </head>
 

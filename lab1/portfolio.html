@@ -148,6 +148,37 @@
             cursor: pointer;
             /* background-color: rgb(250, 243, 233); */
         }
+
+
+        @media only screen and (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+            .college-logo {
+                width: 100px;
+            }
+            .about, pre {
+                margin: 10px;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2, h3, h4, h5, h6 {
+                font-size: 18px;
+            }
+            .button-container {
+                flex-direction: column;
+            }
+            .button {
+                width: 100%;
+            }
+        }
+      
     </style>
 </head>
 <body>
@@ -175,7 +206,7 @@
             <!-- preformatted text -->
             <h4>Printing: " Hello World " in C</h4>
             <pre>
-             #include&lt;stdio.h&gt;
+             #include &lt;stdio.h&gt;
              int main()
                  { 
                     printf("Hello World");
