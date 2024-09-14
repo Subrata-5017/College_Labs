@@ -146,8 +146,8 @@
         }
 
         .back {
-            padding: 10px 30px;
-            margin: 20px;
+            padding: 0.5vw 3vw;
+            margin: 0.5vw;
             width: 10vh;
             font-size: 16px;
             text-align: center;
@@ -162,9 +162,10 @@
 
         #score {
             margin-top: 2vh;
-            font-size: 24px;
             font-size: 1.5rem;
             color: black;
+            text-align: center;
+            justify-content: center;
 
         }
     </style>
@@ -198,10 +199,7 @@
             </div>
         </div>
 
-        <div class="buttons">
-            <button class="button">Back</button>
-            <button class="button">Next</button>
-        </div>
+
     </div>
     <div class="part2">
         <div class="header">SPIDER-MAN : NO WAY HOME </div>
@@ -231,10 +229,7 @@
             </div>
         </div>
 
-        <div class="buttons">
-            <button class="button">Back</button>
-            <button class="button">Next</button>
-        </div>
+
     </div>
     <div class="part3">
         <div class="header">JOKER </div>
@@ -264,10 +259,7 @@
             </div>
         </div>
 
-        <div class="buttons">
-            <button class="button">Back</button>
-            <button class="button">Next</button>
-        </div>
+
     </div>
     <div class="part4">
         <div class="header">GAME OF THRONES</div>
@@ -296,10 +288,7 @@
             </div>
         </div>
 
-        <div class="buttons">
-            <button class="button">Back</button>
-            <button class="button">Next</button>
-        </div>
+
     </div>
     <div class="part5">
         <div class="header">AVENGERS : INFINITY WAR</div>
@@ -338,56 +327,56 @@
     </div>
     </div>
     <script>
-        // Variables to store user selections and correct answers
+
         let selectedAnswers = {};
 
-        // Handle option selection
+
         document.querySelectorAll('.option').forEach(option => {
             option.addEventListener('click', function () {
                 let parent = this.closest('.container');
                 let questionId = parent.getAttribute('data-question-id');
 
-                // Deselect other options for this question
+
                 parent.querySelectorAll('.option').forEach(opt => {
                     opt.classList.remove('selected');
-                    opt.style.backgroundColor = "";  // Reset the background color
+                    opt.style.backgroundColor = "";
                 });
 
-                // Mark the clicked option as selected
-                this.classList.add('selected');
-                this.style.backgroundColor = "lightblue";  // Change color when selected
 
-                // Store the user's selection for this question
+                this.classList.add('selected');
+                this.style.backgroundColor = "yellow";
+
+
                 selectedAnswers[questionId] = this.getAttribute('data-answer');
             });
         });
 
-        // Handle Reset button click
+
         document.getElementById('reset-btn').addEventListener('click', function () {
             document.querySelectorAll('.option').forEach(option => {
                 option.classList.remove('selected');
-                option.style.backgroundColor = "";  // Reset color on reset
+                option.style.backgroundColor = "";
             });
-            selectedAnswers = {}; // Clear selected answers
-            document.getElementById('score').innerHTML = ''; // Clear score display
+            selectedAnswers = {};
+            document.getElementById('score').innerHTML = '';
         });
 
-        // Handle Submit button click
+
         document.getElementById('submit-btn').addEventListener('click', function () {
             let score = 0;
             let totalQuestions = document.querySelectorAll('.container').length;
 
-            // Compare selected answers with correct answers
+
             document.querySelectorAll('.container').forEach(question => {
                 let questionId = question.getAttribute('data-question-id');
                 let correctAnswer = question.getAttribute('data-correct-answer');
 
                 if (selectedAnswers[questionId] === correctAnswer) {
-                    score += 1; // Increment score for correct answer
+                    score += 1;
                 }
             });
 
-            // Display the score
+
             if (document.getElementById('score')) {
                 document.getElementById('score').innerHTML = `Your Score: ${score} / ${totalQuestions}`;
             } else {
