@@ -1,170 +1,403 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QUESTION PAPER</title>
+    <title>Question Page</title>
+    <link href="https://fonts.google.com/specimen/Jacques+Francois+Shadow?classification=Display">
     <style>
-        body{
+        body {
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .part1 {
+            /* margin-top: 20vh; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-size: cover;
+            background-image: url(../lab6/batman-4k-computer-desktop-backgrounds-wallpaper-preview.jpg);
+            color: white;
+        }
+
+        .part2 {
+            /* margin-top: 20vh; */
+            display: flex;
+            background-size: cover;
+            flex-direction: column;
+            align-items: center;
+            background-attachment: fixed;
+            background-image: url(../lab6/spiderman.jpg);
+            color: white;
+        }
+
+        .part3 {
+            /* margin-top: 20vh; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-size: cover;
+            background-image: url(../lab6/joker.jpg);
+            color: white;
+        }
+
+        .part4 {
+            /* margin-top: 20vh; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-size: cover;
+            background-attachment: fixed;
+            background-image: url(../lab6/gameofthrones.jpg);
+            color: white;
+        }
+
+        .part5 {
+            /* margin-top: 20vh; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-size: cover;
+            background-image: url(../lab6/infinity.jpeg);
+            color: white;
+        }
+
+        .header {
+            margin-top: 4vh;
+            font-size: 4rem;
+            /* Adjust size as needed */
+            margin-bottom: -1vh;
+            text-shadow: 1px 10px 5px black;
+            color: yellow;
+
+        }
+
+        .container {
+            width: 60%;
+            max-width: auto;
+            background: transparent;
+            padding: 2vw;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 10vh;
+        }
+
+        .question {
+            font-size: 3vw;
+            margin-bottom: 20px;
+            color: rgb(255, 231, 11);
+            -webkit-text-stroke: 1px black;
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2vw;
+            margin-bottom: 20px;
+            color: black;
+            opacity: 50%;
+        }
+
+        .option {
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+
+        .option:hover {
+            background: #f0f0f0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 1vh;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin: 1vw;
+        }
+
+        .button:hover {
+            background: #0056b3;
+        }
+
+        .home {
+            display: flex;
             align-items: center;
             justify-content: center;
         }
-        table {
-            width: auto;
+
+        .back {
+            padding: 10px 30px;
+            margin: 20px;
+            width: 10vh;
+            font-size: 16px;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 25px;
+            /* text-decoration: underline; */
+            color: black;
+            cursor: pointer;
+            background-color: rgb(250, 243, 233);
+            text-decoration: none;
         }
 
-        tr,
-        td {
-            /* border: 1px solid; */
+        #score {
+            margin-top: 2vh;
+            font-size: 24px;
+            font-size: 1.5rem;
+            color: black;
+
         }
-        td{
-            margin: 2 vh;
-        }
-    
     </style>
 </head>
 
 <body>
-    <h1>QUESTION PAPER</h1>
-
     <div class="part1">
-        <table>
-            <tr>
-                <td>Q.1></td>
-                <td>&nbsp;WHO DIRECTED THE MOVIE BATMAN ?</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <input type="checkbox"> Tim Burton <br>
-                    <input type="checkbox"> Christopher Nolanb <br>
-                    <input type="checkbox"> Zack Snyder <br>
-                    <input type="checkbox"> Josh Whedon
-                </td>
-            </tr>
-            <tr>
-                <td>Q.2></td>
-                <td>&nbsp;WHAT IS THE FEAR TOXIN IN BATMAN BEGINS USED FOR ?</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <input type="checkbox"> To Make People Invisible <br><input type="checkbox"> To Control Gotham's
-                    Citizens <br><input type="checkbox"> To Manipulate Bruce Wayne <br><input type="checkbox"> To Heal
-                    Injuries
-            </tr>
+        <div class="header">THE BATMAN</div>
+        <div class="container" data-question-id="q1" data-correct-answer="Christopher Nolan">
+            <!-- Question 1 -->
+            <div class="question">
+                WHO DIRECTED THE MOVIE BATMAN BEGINS ?
+            </div>
+            <div class="options">
+                <div class="option" data-answer="Tim Burton">Tim Burton</div>
+                <div class="option" data-answer="Christopher Nolan">Christopher Nolan</div>
+                <div class="option" data-answer="Zack Snyder">Zack Snyder</div>
+                <div class="option" data-answer="Josh Whedon">Josh Whedon</div>
+            </div>
+        </div>
+        <div class="container" data-question-id="q2" data-correct-answer="To Control Gotham's Citizens">
 
-        </table>
+            <div class="question">
+                WHAT IS THE FEAR TOXIN IN BATMAN BEGINS USED FOR ?
+            </div>
+            <div class="options">
+                <div class="option" data-answer="To Make People Invisible">To Make People Invisible</div>
+                <div class="option" data-answer="To Control Gotham's Citizens">To Control Gotham's Citizens</div>
+                <div class="option" data-answer="To Manipulate Bruce Wayne">To Manipulate Bruce Wayne</div>
+                <div class="option" data-answer="To Heal Injuries">To Heal Injuries</div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="button">Back</button>
+            <button class="button">Next</button>
+        </div>
     </div>
     <div class="part2">
-        <table>
-            <tr>
-                <td>Q.3></td>
-                <td>&nbsp;WHICH VILLAIN DOES PETER FIRST ENCOUNTER IN SPIDER-MAN: NO WAY HOME?</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="checkbox"> Green Goblin <br><input type="checkbox"> Doctor Octopus <br><input
-                        type="checkbox">
-                    Electro <br><input type="checkbox"> Sandman
-                </td>
-            </tr>
-            <tr>
-                <td>Q.4></td>
-                <td>&nbsp;WHICH TWO OTHER VERSIONS OF SPIDER-MAN APPEAR IN SPIDER-MAN: NO WAY HOME?
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="checkbox"> Tobey Maguire and Andrew Garfield <br><input type="checkbox"> Tom Hardy and
-                    Andrew
-                    Garfield <br><input type="checkbox"> Tobey Maguire and Tom Hardy <br><input type="checkbox"> Chris
-                    Evans and Andrew
-                    Garfield
-                </td>
-            </tr>
-        </table>
+        <div class="header">SPIDER-MAN : NO WAY HOME </div>
+        <div class="container" data-question-id="q3" data-correct-answer="Doctor Octopus">
+
+            <div class="question">
+                WHICH VILLAIN DOES PETER FIRST ENCOUNTER IN SPIDER-MAN: NO WAY HOME ?
+            </div>
+            <div class="options">
+                <div class="option" data-answer="Green Goblin">Green Goblin</div>
+                <div class="option" data-answer="Doctor Octopus"> Doctor Octopus</div>
+                <div class="option" data-answer="Electro">Electro</div>
+                <div class="option" data-answer="Sandman">Sandman</div>
+            </div>
+        </div>
+        <div class="container" data-question-id="q4" data-correct-answer="Tobey Maguire and Andrew Garfield">
+
+            <div class="question">
+                WHICH TWO OTHER VERSIONS OF SPIDER-MAN APPEAR IN SPIDER-MAN: NO WAY HOME?
+            </div>
+            <div class="options">
+                <div class="option" data-answer="Tobey Maguire and Andrew Garfield">Tobey Maguire and Andrew Garfield
+                </div>
+                <div class="option" data-answer="Tom Hardy and Andrew">Tom Hardy and Andrew</div>
+                <div class="option" data-answer="Tobey Maguire and Tom Hardy">Tobey Maguire and Tom Hardy </div>
+                <div class="option" data-answer="Chris Evans and Andrew Garfield">Chris Evans and Andrew Garfield</div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="button">Back</button>
+            <button class="button">Next</button>
+        </div>
     </div>
     <div class="part3">
-        <table>
-            <tr>
-                <td>Q.5></td>
-                <td>&nbsp;WHAT IS ARTHUR FLECK'S PROFESSION AT THE BEGINNING OF THE MOVIE JOKER? </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="checkbox"> Stand-up comedian <br><input type="checkbox"> Taxi driver <br><input
-                        type="checkbox"> Party
-                    clown <br><input type="checkbox"> Street musician
-                </td>
-            </tr>
-            <tr>
-                <td>Q.6></td>
-                <td>&nbsp;IN JOKER, WHAT TRIGGERS ARTHUR FLECK'S TRANSFORMATION INTO THE JOKER? </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="checkbox"> A failed comedy show <br><input type="checkbox"> Losing his job and being
-                    attacked on the
-                    subway <br><input type="checkbox"> His mother's death <br><input type="checkbox"> A confrontation
-                    with Thomas
-                    Wayne</td>
-            </tr>
+        <div class="header">JOKER </div>
+        <div class="container" data-question-id="q5" data-correct-answer="Party clown">
 
-        </table>
+            <div class="question">
+                WHAT IS ARTHUR FLECK'S PROFESSION AT THE BEGINNING OF THE MOVIE JOKER ?
+            </div>
+            <div class="options">
+                <div class="option" data-answer="Stand-up comedian">Stand-up comedian</div>
+                <div class="option" data-answer=" Taxi driver"> Taxi driver</div>
+                <div class="option" data-answer="Party clown">Party clown</div>
+                <div class="option" data-answer="Street musician">Street musician</div>
+            </div>
+        </div>
+        <div class="container" data-question-id="q6" data-correct-answer="A confrontation with Thomas Wayne">
+            <div class="question">
+                IN JOKER, WHAT TRIGGERS ARTHUR FLECK'S TRANSFORMATION INTO THE JOKER ?
+            </div>
+            <div class="options">
+                <div class="option" data-answer="A failed comedy show">A failed comedy show </div>
+                <div class="option" data-answer="Losing his job and being attacked on the Subway"> Losing his job and
+                    being attacked on the Subway</div>
+                <div class="option" data-answer="His mother's death">His mother's death</div>
+                <div class="option" data-answer="A confrontation with Thomas Wayne">A confrontation with Thomas Wayne
+                </div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="button">Back</button>
+            <button class="button">Next</button>
+        </div>
     </div>
     <div class="part4">
-        <table>
-            <tr>
-                <td>Q.7></td>
-                <td>&nbsp;WHO IS KNOWN AS THE "MOTHER OF DRAGONS" IN GAME OF THRONES?</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="checkbox"> Sansa Stark <br><input type="checkbox"> Daenerys Targaryen <br><input
-                        type="checkbox">
-                    Cersei Lannister <br><input type="checkbox"> Arya Stark</td>
-            </tr>
-            <tr>
-                <td>Q.8> </td>
-                <td>&nbsp;WHICH STARK FAMILY MEMBER SURVIVES UNTIL THE END OF THE SERIES AND BECOMES THE KING OF
-                    THE
-                    SIX KINGDOMS?</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <input type="checkbox"> Jon Snow <br><input type="checkbox"> Arya Stark <br>
-                    <input type="checkbox"> Sansa Stark <br><input type="checkbox"> Bran Stark
-                </td>
-            </tr>
-        </table>
+        <div class="header">GAME OF THRONES</div>
+        <div class="container" data-question-id="q7" data-correct-answer="Daenerys Targaryen">
+
+            <div class="question">
+                WHO IS KNOWN AS THE "MOTHER OF DRAGONS" IN GAME OF THRONES ?
+            </div>
+            <div class="options">
+                <div class="option" data-answer="Sansa Stark"> Sansa Stark </div>
+                <div class="option" data-answer="Daenerys Targaryen"> Daenerys Targaryen </div>
+                <div class="option" data-answer="Cersei Lannister">Cersei Lannister </div>
+                <div class="option" data-answer="Arya Stark">Arya Stark</div>
+            </div>
+        </div>
+        <div class="container" data-question-id="q8" data-correct-answer="Bran Stark">
+
+            <div class="question">
+                WHICH STARK FAMILY MEMBER SURVIVES UNTIL THE END OF THE SERIES AND BECOMES THE KING OF THE SIX KINGDOMS?
+            </div>
+            <div class="options">
+                <div class="option" data-answer="Jon Snow ">Jon Snow </div>
+                <div class="option" data-answer=" Arya Stark"> Arya Stark</div>
+                <div class="option" data-answer="Sansa Stark">Sansa Stark</div>
+                <div class="option" data-answer="Bran Stark">Bran Stark</div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="button">Back</button>
+            <button class="button">Next</button>
+        </div>
     </div>
     <div class="part5">
-        <table>
-            <tr>
-                <td>Q.9> </td>
-                <td>&nbsp;WHICH INFINITY STONE DOES THANOS FIRST OBTAIN IN AVENGERS: INFINITY WAR?</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="checkbox"> Time Stone <br><input type="checkbox"> Space Stone <br><input type="checkbox"> Power
-                    Stone <br><input type="checkbox"> Reality Stone</td>
-            </tr>
-            <tr>
-                <td>Q.10></td>
-                <td>&nbsp;WHERE IS THE SOUL STONE LOCATED IN AVENGERS: INFINITY WAR?</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="checkbox"> Vormir <br><input type="checkbox"> Xandar <br><input type="checkbox"> Knowhere <br><input
-                    type="checkbox"> Wakanda</td>
-            </tr>
-    
-        </table>
-    </div>
+        <div class="header">AVENGERS : INFINITY WAR</div>
+        <div class="container" data-question-id="q9" data-correct-answer="Power Stone">
 
+            <div class="question">
+                WHICH INFINITY STONE DOES THANOS FIRST OBTAIN IN AVENGERS: INFINITY WAR?
+            </div>
+            <div class="options">
+                <div class="option" data-answer="Time Stone">Time Stone</div>
+                <div class="option" data-answer="Space Stone"> Space Stone </div>
+                <div class="option" data-answer="Power Stone">Power Stone </div>
+                <div class="option" data-answer="Reality Stone">Reality Stone</div>
+            </div>
+        </div>
+        <div class="container" data-question-id="q10" data-correct-answer="Vormir">
+            <div class="question">
+                WHERE IS THE SOUL STONE LOCATED IN AVENGERS: INFINITY WAR?
+            </div>
+            <div class="options">
+                <div class="option" data-answer="Vormir">Vormir </div>
+                <div class="option" data-answer="Xandar"> Xandar</div>
+                <div class="option" data-answer="Knowhere">Knowhere</div>
+                <div class="option" data-answer="Wakanda">Wakanda</div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="button" id="submit-btn">SUBMIT</button>
+            <button class="button" id="reset-btn">RESET</button>
+        </div>
+    </div>
+    <div id="score"></div>
+    <div class="home">
+        <a href="../index.html" class="back">Back to home</a>
+    </div>
+    </div>
+    <script>
+        // Variables to store user selections and correct answers
+        let selectedAnswers = {};
+
+        // Handle option selection
+        document.querySelectorAll('.option').forEach(option => {
+            option.addEventListener('click', function () {
+                let parent = this.closest('.container');
+                let questionId = parent.getAttribute('data-question-id');
+
+                // Deselect other options for this question
+                parent.querySelectorAll('.option').forEach(opt => {
+                    opt.classList.remove('selected');
+                    opt.style.backgroundColor = "";  // Reset the background color
+                });
+
+                // Mark the clicked option as selected
+                this.classList.add('selected');
+                this.style.backgroundColor = "lightblue";  // Change color when selected
+
+                // Store the user's selection for this question
+                selectedAnswers[questionId] = this.getAttribute('data-answer');
+            });
+        });
+
+        // Handle Reset button click
+        document.getElementById('reset-btn').addEventListener('click', function () {
+            document.querySelectorAll('.option').forEach(option => {
+                option.classList.remove('selected');
+                option.style.backgroundColor = "";  // Reset color on reset
+            });
+            selectedAnswers = {}; // Clear selected answers
+            document.getElementById('score').innerHTML = ''; // Clear score display
+        });
+
+        // Handle Submit button click
+        document.getElementById('submit-btn').addEventListener('click', function () {
+            let score = 0;
+            let totalQuestions = document.querySelectorAll('.container').length;
+
+            // Compare selected answers with correct answers
+            document.querySelectorAll('.container').forEach(question => {
+                let questionId = question.getAttribute('data-question-id');
+                let correctAnswer = question.getAttribute('data-correct-answer');
+
+                if (selectedAnswers[questionId] === correctAnswer) {
+                    score += 1; // Increment score for correct answer
+                }
+            });
+
+            // Display the score
+            if (document.getElementById('score')) {
+                document.getElementById('score').innerHTML = `Your Score: ${score} / ${totalQuestions}`;
+            } else {
+                console.error('Score element not found!');
+            }
+        });
+
+
+
+    </script>
 </body>
 
 </html>
