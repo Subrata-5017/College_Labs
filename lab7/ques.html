@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Paper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+           background: linear-gradient(45deg, #b38473, #3e4958);
+        }
+        .container {
+            width: 80%;
+            text-align: center;
+            margin: auto;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .question {
+            margin-top: 10vh;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .home
+        {
+            color: white;
+            margin-left: 46.5vw;
+            margin-top: 1.5vh;
+            margin-bottom: 0px;
+        }
+        p{
+          font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Final Examination - JavaScript Basics</h1>
+        <h2>Student Details</h2>
+        <p>Name: <span id="studentName">Not Entered</span></p>
+        <p>Instructions: Please answer all the questions carefully.</p>
+        
+        <!-- Questions Section -->
+        <div class="question">
+            <h3>Question 1: What is JavaScript?</h3>
+            <textarea rows="5" cols="80" placeholder="Write your answer here..."></textarea>
+        </div>
+        <div class="question">
+            <h3>Question 2: Explain the difference between 'let', 'const', and 'var'.</h3>
+            <textarea rows="5" cols="80" placeholder="Write your answer here..."></textarea>
+        </div>
+        <div class="question">
+            <h3>Question 3: What is the purpose of the 'this' keyword in JavaScript?</h3>
+            <textarea rows="5" cols="80" placeholder="Write your answer here..."></textarea>
+        </div>
+
+        <!-- Buttons to Trigger Dialog Boxes -->
+        <button onclick="startExam()">Start Exam</button>
+        <button onclick="submitExam()">Submit Exam</button>
+    </div>
+    <div class="home">
+        <button><a href="/index.html">Home</a></button>
+    </div>
+
+    <script>
+        // Alert box: Shows instructions when the exam starts
+        function startExam() {
+            alert("Welcome to the exam! Please enter your name before proceeding.");
+            enterStudentName();
+        }
+
+        // Prompt box: Asks the user to enter their name
+        function enterStudentName() {
+            let name = prompt("Please enter your name:", "Your Name");
+            if (name !== null && name !== "") {
+                document.getElementById("studentName").innerText = name;
+            } else {
+                alert("Name cannot be blank. Please enter a valid name.");
+            }
+        }
+
+        // Confirm box: Asks for confirmation before submitting the exam
+        function submitExam() {
+            let confirmation = confirm("Are you sure you want to submit the exam?");
+            if (confirmation) {
+                alert("Exam submitted successfully!");
+            } else {
+                alert("Submission canceled. You can continue working on the exam.");
+            }
+        }
+    </script>
+</body>
+</html>
