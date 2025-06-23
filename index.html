@@ -1,13 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My College Projects</title>
+  <meta charset="UTF-8">
+  <title>Subrata's College Labs</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #282c34;
+      color: white;
+      padding: 2rem 0;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .card {
+      background: white;
+      margin: 1rem;
+      padding: 1.5rem;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease-in-out;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card a {
+      display: block;
+      margin-top: 1rem;
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      margin-top: 2rem;
+      padding: 1rem;
+      background: #282c34;
+      color: white;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to My Projects</h1>
-  <ul>
-    <li><a href="TicTacToe/">Play Tic Tac Toe</a></li>
-  </ul>
+  <header>
+    <h1>Subrata's College Lab Projects</h1>
+    <p>A collection of mini-projects and assignments built during my college journey</p>
+  </header>
+
+  <section class="projects">
+    <div class="card">
+      <h3>Tic Tac Toe</h3>
+      <p>Play the classic game implemented using HTML, CSS & JavaScript.</p>
+      <a href="TicTacToe/">Play Now</a>
+    </div>
+
+    <!-- more cells -->
+  </section>
+
+  <footer>
+    Made by Subrata Das | NIT Meghalaya
+  </footer>
 </body>
 </html>
-\
